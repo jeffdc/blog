@@ -4,8 +4,8 @@ require "stringex"
 
 ## -- Rsync Deploy config -- ##
 # Be sure your public key is listed in your server's ~/.ssh/authorized_keys file
-ssh_user       = "user@domain.com"
-document_root  = "~/website.com/"
+ssh_user       = "jeffc666@nothoo.com"
+document_root  = "~/www/"
 deploy_default = "rsync"
 
 # This will be configured for you when you run config_deploy
@@ -215,7 +215,9 @@ end
 desc "Deploy website via rsync"
 task :rsync do
   puts "## Deploying website via Rsync"
-  ok_failed system("rsync -avz --delete #{public_dir}/ #{ssh_user}:#{document_root}")
+  # JC Added/modified - added -FF option to pick up .rsync-excludes. Also added the ssh port.
+  ok_failed system("rsync -FFavze 'ssh -p 7822' --delete #{public_dir}/ #{ssh_user}:#{document_root}")
+
 end
 
 desc "deploy public directory to github pages"

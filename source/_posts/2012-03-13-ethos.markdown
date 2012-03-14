@@ -1,0 +1,7 @@
+---
+layout: post
+title: "Ethos"
+date: 2012-03-13 22:56
+comments: true
+categories: 
+---

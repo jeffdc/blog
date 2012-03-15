@@ -216,7 +216,7 @@ desc "Deploy website via rsync"
 task :rsync do
   puts "## Deploying website via Rsync"
   # JC Added/modified - added -FF option to pick up .rsync-excludes. Also added the ssh port.
-  ok_failed system("rsync -FFavze 'ssh -p 7822' --delete #{public_dir}/ #{ssh_user}:#{document_root}")
+  ok_failed system("rsync --verbose -FFavze 'ssh -p 7822' --delete #{public_dir}/ #{ssh_user}:#{document_root}")
 
 end
 

@@ -6,7 +6,6 @@ require "stringex"
 # Be sure your public key is listed in your server's ~/.ssh/authorized_keys file
 ssh_user       = "jeffc666@nothoo.com"
 document_root  = "~/www/"
-document_root  = "~/website.com/"
 ssh_port       = "7822"
 rsync_delete   = true
 deploy_default = "rsync"
@@ -239,7 +238,6 @@ task :rsync do
   end
   puts "## Deploying website via Rsync"
   # JC Added/modified - added -FF option to pick up .rsync-excludes. Also added the ssh port.
-=======
 ##OLD  ok_failed system("rsync --verbose -FFavze 'ssh -p 7822' --delete #{public_dir}/ #{ssh_user}:#{document_root}")
   ok_failed system("rsync --verbose -FFavze 'ssh -p #{ssh_port}' #{exclude} #{"--delete" unless rsync_delete == false} #{public_dir}/ #{ssh_user}:#{document_root}")
 end

@@ -6,3 +6,8 @@ comments: true
 categories: 
 published: false
 ---
+
+I am sure that some potential future employer will read this post and know immediately that I am the wrong guy for the job. This is a good thing. I hope that the converse conclusion is true as well.
+
+Throughout my career I have struggled with 
+[](http://www.randsinrepose.com/archives/2012/03/13/hacking_is_important.html)

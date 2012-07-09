@@ -45,11 +45,7 @@ titlecase: true       # Converts page and post titles to titlecase
 
 # list each of the sidebar modules you want to include, in the order you want them to appear.
 # To add custom asides, create files in /source/_includes/custom/asides/ and add them to the list like 'custom/asides/custom_aside_name.html'
-<<<<<<< HEAD
-default_asides: [asides/recent_posts.html, asides/twitter.html, asides/github.html, asides/coderwall.html, asides/pinboard.html]
-=======
-default_asides: [asides/recent_posts.html, asides/github.html, asides/twitter.html, asides/delicious.html, asides/pinboard.html, asides/googleplus.html]
->>>>>>> f5b6df5a576da5524b29f9f1956c7d7befbc4825
+default_asides: [asides/recent_posts.html, asides/coderwall.html, asides/github.html, asides/twitter.html, asides/delicious.html, asides/pinboard.html, asides/googleplus.html]
 
 # Each layout uses the default asides, but they can have their own asides instead. Simply uncomment the lines below
 # and add an array with the asides you want to use.
@@ -79,15 +75,13 @@ twitter_tweet_button: true
 google_plus_one: false
 google_plus_one_size: medium
 
-<<<<<<< HEAD
 # Coderwall
 coderwall_user: jeffc
-=======
+
 # Google Plus Profile
 # Hidden: No visible button, just add author information to search results
 googleplus_user:
 googleplus_hidden: false
->>>>>>> f5b6df5a576da5524b29f9f1956c7d7befbc4825
 
 # Pinboard
 pinboard_user:

@@ -4,15 +4,11 @@ require "stringex"
 
 ## -- Rsync Deploy config -- ##
 # Be sure your public key is listed in your server's ~/.ssh/authorized_keys file
-<<<<<<< HEAD
 ssh_user       = "jeffc666@nothoo.com"
 document_root  = "~/www/"
-=======
-ssh_user       = "user@domain.com"
-ssh_port       = "22"
 document_root  = "~/website.com/"
+ssh_port       = "7822"
 rsync_delete   = true
->>>>>>> f5b6df5a576da5524b29f9f1956c7d7befbc4825
 deploy_default = "rsync"
 
 # This will be configured for you when you run config_deploy
@@ -242,13 +238,10 @@ task :rsync do
     exclude = "--exclude-from '#{File.expand_path('./rsync-exclude')}'"
   end
   puts "## Deploying website via Rsync"
-<<<<<<< HEAD
   # JC Added/modified - added -FF option to pick up .rsync-excludes. Also added the ssh port.
-  ok_failed system("rsync --verbose -FFavze 'ssh -p 7822' --delete #{public_dir}/ #{ssh_user}:#{document_root}")
-
 =======
-  ok_failed system("rsync -avze 'ssh -p #{ssh_port}' #{exclude} #{"--delete" unless rsync_delete == false} #{public_dir}/ #{ssh_user}:#{document_root}")
->>>>>>> f5b6df5a576da5524b29f9f1956c7d7befbc4825
+##OLD  ok_failed system("rsync --verbose -FFavze 'ssh -p 7822' --delete #{public_dir}/ #{ssh_user}:#{document_root}")
+  ok_failed system("rsync --verbose -FFavze 'ssh -p #{ssh_port}' #{exclude} #{"--delete" unless rsync_delete == false} #{public_dir}/ #{ssh_user}:#{document_root}")
 end
 
 desc "deploy public directory to github pages"
